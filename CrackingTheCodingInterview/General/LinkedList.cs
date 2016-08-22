@@ -42,6 +42,18 @@ namespace General
             return head.Value;
         }
 
+        public void Remove(T item)
+        {
+            if (_length == 0) return;
+            var match = FindNext(value => value.Equals(item), _head);
+            if (match == null) return;
+            if (match.Previous != null)
+                match.Previous.Next = match.Next;
+            if (match.Next != null)
+                match.Next.Previous = match.Previous;
+            _length--;
+        }
+
         public bool IsEmpty()
         {
             return _length <= 0;
@@ -120,6 +132,19 @@ namespace General
                     existing.Add(current.Value, current.Value);
                 current = current.Next;
             }
+        }
+
+        public T FindLast(int index = 0)
+        {
+            var count = 0;
+            var current = _tail;
+            while(count < index)
+            {
+                if (current.Previous == null) return default(T);
+                current = current.Previous;
+                count++;
+            }
+            return current.Value;
         }
 
         private void FindAndProcessMatches(Func<T, bool> match, Action<LinkedListItem<T>> update)
