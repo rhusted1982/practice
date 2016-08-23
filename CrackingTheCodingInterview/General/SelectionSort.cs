@@ -1,35 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace General
 {
-    internal static partial class SortingAlgorithms<T>
+    internal static partial class SortFactory
     {
-        public static Sort<T> SelectionSort = (items) =>
+        //O(n^2) all time and O(n) space
+        public static Sort<T> SelectionSort<T>() where T : IComparable
         {
-            if (items == null || items.Length == 0) return new T[0];
-            var list = new T[items.Length];
-            for(var index = 0; index < items.Length; index++)
-                list[index] = items[index];
-            for(var index = 0; index < items.Length - 1; index++)
+            return (items) =>
             {
-                var minIndex = index;
-                for(var compareIndex = index + 1; compareIndex < items.Length; compareIndex++)
+                if (items == null || items.Length <= 1) return;
+                for(var i = 0; i < items.Length - 1; i++)
                 {
-                    if (list[minIndex].CompareTo(list[compareIndex]) > 0)
-                        minIndex = compareIndex;
+                    var minIndex = i;
+                    for(var j = i + 1; j < items.Length; j++)
+                    {
+                        if (items[minIndex].CompareTo(items[j]) > 0)
+                            minIndex = j;
+                    }
+                    items.Swap(i, minIndex);
                 }
-                if(minIndex != index)
-                {
-                    var value = list[index];
-                    list[index] = list[minIndex];
-                    list[minIndex] = value;
-                }
-            }
-            return list;
-        };
+            };
+        }
     }
 }

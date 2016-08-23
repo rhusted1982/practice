@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace General
 {
-    public class TreeNode<T>
+    class QuickSort
     {
-
     }
 }
