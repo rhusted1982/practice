@@ -10,7 +10,10 @@ namespace General
     {
         public static char[] ToAlphabeticOrder(this string value)
         {
-            return string.IsNullOrEmpty(value) ? new char[0] : SortingAlgorithms<char>.SelectionSort(value.ToLowerInvariant().ToCharArray());
+            if (string.IsNullOrEmpty(value)) return new char[0];
+            var array = value.ToLowerInvariant().ToCharArray();
+            SortFactory.SelectionSort<char>().Invoke(array);
+            return array;
         }
 
         public static bool IsUnique(this string value)

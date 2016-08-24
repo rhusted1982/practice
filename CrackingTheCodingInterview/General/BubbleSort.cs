@@ -2,7 +2,7 @@
 
 namespace General
 {
-    internal static partial class SortFactory
+    public static partial class SortFactory
     {
         //O(n) best, O(n^2) rest time, O(n) space
         public static Sort<T> BubbleSort<T>() where T : IComparable

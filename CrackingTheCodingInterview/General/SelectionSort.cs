@@ -2,7 +2,7 @@
 
 namespace General
 {
-    internal static partial class SortFactory
+    public static partial class SortFactory
     {
         //O(n^2) all time and O(n) space
         public static Sort<T> SelectionSort<T>() where T : IComparable

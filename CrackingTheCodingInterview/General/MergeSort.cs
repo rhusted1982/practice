@@ -2,14 +2,16 @@
 
 namespace General
 {
-    internal static partial class SortFactory
+    public static partial class SortFactory
     {
         public static Sort<T> MergeSort<T>() where T : IComparable
         {
             return items =>
             {
                 if (items == null || items.Length <= 1) return;
-                items = MergeSort(items);
+                var result = MergeSort(items);
+                for (var index = 0; index < result.Length; index++)
+                    items[index] = result[index];
             };
         }
 

@@ -1,4 +1,4 @@
 ﻿namespace General
 {
-    internal delegate void Sort<T>(T[] items);
+    public delegate void Sort<T>(T[] items);
 }
