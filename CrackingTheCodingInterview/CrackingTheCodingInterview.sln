@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedLists", "LinkedLists\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAndSearching", "SortingAndSearching\SortingAndSearching.csproj", "{1FA726CC-6729-419D-BAFC-C3ACE2AD62BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreesAndGraphs", "TreesAndGraphs\TreesAndGraphs.csproj", "{2FAF7F82-DEBC-4D06-82FB-4B3CEA774952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1FA726CC-6729-419D-BAFC-C3ACE2AD62BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FA726CC-6729-419D-BAFC-C3ACE2AD62BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FA726CC-6729-419D-BAFC-C3ACE2AD62BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAF7F82-DEBC-4D06-82FB-4B3CEA774952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAF7F82-DEBC-4D06-82FB-4B3CEA774952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAF7F82-DEBC-4D06-82FB-4B3CEA774952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAF7F82-DEBC-4D06-82FB-4B3CEA774952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
